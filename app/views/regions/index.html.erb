@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Regions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Region</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @regions.each do |region| %>
+      <tr>
+        <td><%= region.region %></td>
+
+        <td><%= link_to image_tag('https://articulate-heroes.s3.amazonaws.com/uploads/attachment/attachment_url/6949/1-without-opcity.png?dl=true', width:15, height:15), region %></td>
+
+
+        <td><%= link_to image_tag('http://vignette2.wikia.nocookie.net/lains-horrible-adventure/images/b/b6/Edit-icon.png/revision/latest?cb=20130313015516', width:15, height:15), edit_region_path(region) %></td>
+        <td><%= link_to image_tag('https://cdn2.iconfinder.com/data/icons/large-glossy-svg-icons/512/erase_delete_remove_wipe_out-512.png', width:15, height:15), region, method: :delete, data: { confirm: 'Delete?' } %></td>
+    
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Region', new_region_path %>
+<%= link_to 'Species', '/species' %>
+<%= link_to 'Sightings', '/sightings' %>
