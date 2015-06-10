@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'sightings#index'
   resources :regions
   resources :sightings
   resources :species

@@ -71,6 +71,6 @@ class SightingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sighting_params
-      params.require(:sighting).permit(:species, :date, :latitude, :longitude)
+      params.require(:sighting).permit(:species_id, :region_id, :date, :latitude, :longitude)
     end
 end

@@ -25,7 +25,7 @@ class SpeciesController < ApplicationController
   # POST /species.json
   def create
     @species = Species.new(species_params)
-
+logger.debug @species.inspect
     respond_to do |format|
       if @species.save
         format.html { redirect_to @species, notice: 'Species was successfully created.' }

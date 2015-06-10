@@ -9,6 +9,7 @@
       <th>Date</th>
       <th>Latitude</th>
       <th>Longitude</th>
+      <th>Region</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +17,11 @@
   <tbody>
     <% @sightings.each do |sighting| %>
       <tr>
-        <td><%= sighting.species_id %></td>
+        <td><%= sighting.species.species %></td>
         <td><%= sighting.date %></td>
         <td><%= sighting.latitude %></td>
         <td><%= sighting.longitude %></td>
+        <td><%= sighting.region.region %></td>
 
         <td><%= link_to image_tag('https://articulate-heroes.s3.amazonaws.com/uploads/attachment/attachment_url/6949/1-without-opcity.png?dl=true', width:15, height:15), sighting %></td>
 
